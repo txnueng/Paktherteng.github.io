@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (membersContainer) {
         membersData.forEach((member, index) => {
             const card = document.createElement('div');
+card.classList.add('member-card', 'reveal');
             card.classList.add('member-card');
             card.setAttribute('onclick', `openModal(${index})`);
             card.innerHTML = `
