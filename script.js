@@ -1,15 +1,15 @@
 // ข้อมูลสมาชิก 10 คน
 const membersData = [
     { name: "นายศิริพงศ์ พลไชย", role: "ประธานนักเรียน", img: "Screenshot_20260119_191420_Instagram.jpg", desc: "", ig: "t1.nuengx", fb: "Siripong Phonchai" },
-    { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+2", desc: "", ig: "babiilx2lo4xs", fb: "Somying Jingjai" },
-    { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "mymind_melody", fb: "Keng Klahan" },
-    { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+4", desc: "", ig: "babygirl3ystt", fb: "Suay Saisai" },
-    { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+5", desc: "", ig: "_lluvvida", fb: "Tae Tun" },
-    { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+6", desc: "", ig: "kim_mmmt", fb: "Dao Den" },
-    { name: "นางสาวอรณิชา พันธ์ศรี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "monlelasandia", fb: "Boy Gamer" },
-    { name: "นางสาวถาวรีย์ เกษสร", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+8", desc: "", ig: "tainunsnaffle_", fb: "Fah Sodsai" },
-    { name: "นางสาวธัญญาภรณ์ จำปาโท", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+9", desc: "", ig: "maprangmaq", fb: "Kem Kangrang" },
-    { name: "นางสาวพิมญาดา อินทนนต์", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+10", desc: "", ig: "268.9a", fb: "Nam Jaingam" },
+    { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+2", desc: "", ig: "babiilx2lo4xs", fb: "Láloxs Kx" },
+    { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "mymind_melody", fb: "Sasikan Khamthong" },
+    { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+4", desc: "", ig: "babygirl3ystt", fb: "Maprang Pps" },
+    { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+5", desc: "", ig: "_lluvvida", fb: "Rattanaphon Lotkaeo" },
+    { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+6", desc: "", ig: "kim_mmmt", fb: "Titiporn  Salubsri" },
+    { name: "นางสาวอรณิชา พันธ์ศรี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "monlelasandia", fb: "" },
+    { name: "นางสาวถาวรีย์ เกษสร", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+8", desc: "", ig: "tainunsnaffle_", fb: "AI UN" },
+    { name: "นางสาวธัญญาภรณ์ จำปาโท", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+9", desc: "", ig: "maprangmaq", fb: "Thanyapron Champato" },
+    { name: "นางสาวพิมญาดา อินทนนต์", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+10", desc: "", ig: "268.9a", fb: "Pimyada Intanon" },
 ];
 
 // ทำงานเมื่อโหลดหน้าเสร็จ
