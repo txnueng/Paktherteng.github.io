@@ -294,7 +294,7 @@ h2 { font-size: 1.5rem; color: #555; margin: 15px 0; }
 .member-img { width: 100%; height: 240px; object-fit: cover; transition: 0.8s; filter: grayscale(20%); }
 .member-card:hover .member-img { transform: scale(1.1); filter: grayscale(0%); }
 .member-info { padding: 20px; position: relative; z-index: 2; background: white; }
-.member-info h4 { font-size: 1.2rem; color: var(--dark-blue); margin-bottom: 5px; }
+.member-info h4 { font-size: 0.9rem; color: var(--dark-blue); margin-bottom: 5px; }
 .member-info p { font-size: 0.9rem; color: #666; }
 
 /* เทคนิค Staggered สำหรับสมาชิก (ถ้ามี 10 คน) */
