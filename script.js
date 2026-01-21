@@ -1,6 +1,6 @@
 // ข้อมูลสมาชิก 10 คน
 const membersData = [
-    { name: "นายศิริพงศ์ พลไชย", role: "ประธานนักเรียน", img: "https://via.placeholder.com/200?text=P+1", desc: "", ig: "t1.nuengx", fb: "Siripong Phonchai" },
+    { name: "นายศิริพงศ์ พลไชย", role: "ประธานนักเรียน", img: "Screenshot_20260119_191420_Instagram.jpg", desc: "", ig: "t1.nuengx", fb: "Siripong Phonchai" },
     { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+2", desc: "", ig: "somying.real", fb: "Somying Jingjai" },
     { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "keng_brave", fb: "Keng Klahan" },
     { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+4", desc: "", ig: "suay.sai", fb: "Suay Saisai" },
