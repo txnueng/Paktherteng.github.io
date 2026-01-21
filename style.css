@@ -1,0 +1,94 @@
+/* การตั้งค่าพื้นฐาน */
+:root {
+    --primary-blue: #007bff;
+    --light-blue: #e3f2fd;
+    --dark-blue: #004494;
+    --white: #ffffff;
+    --text-color: #333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+body { background-color: #f4f7f6; color: var(--text-color); }
+a { text-decoration: none; }
+
+/* Navbar */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo, .logo a { font-size: 1.5rem; font-weight: 600; color: var(--primary-blue); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: #555; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary-blue); font-weight: bold; }
+
+/* Hero Section (หน้าแรก) */
+.hero-section {
+    background: linear-gradient(180deg, var(--light-blue), white);
+    text-align: center; padding: 60px 20px; min-height: 90vh;
+    display: flex; align-items: center; justify-content: center;
+}
+.party-logo { width: 150px; border-radius: 50%; border: 5px solid white; margin-bottom: 20px; }
+h1 { font-size: 2.5rem; color: var(--dark-blue); }
+.number { color: #ff4757; font-size: 3.5rem; }
+.slogan { background: var(--primary-blue); color: white; padding: 8px 20px; border-radius: 30px; display: inline-block; margin: 20px 0; }
+
+/* Main Menu Cards (ปุ่มหน้าแรก) */
+.main-menu {
+    display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;
+}
+.menu-card {
+    background: white; width: 200px; padding: 25px; border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; color: var(--text-color);
+    transition: transform 0.3s, border 0.3s; border: 2px solid transparent;
+}
+.menu-card:hover { transform: translateY(-10px); border-color: var(--primary-blue); }
+.menu-card i { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 10px; }
+.menu-card h3 { color: var(--dark-blue); margin-bottom: 5px; }
+.menu-card p { font-size: 0.8rem; color: #777; }
+
+.ig-btn {
+    display: inline-block; margin-top: 30px; background: #E1306C; color: white;
+    padding: 10px 25px; border-radius: 30px; font-weight: bold;
+}
+
+/* Sections General */
+.container, .members-section { padding: 40px 10%; }
+.header-with-back { display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 30px; }
+.section-title { font-size: 2rem; color: var(--dark-blue); }
+.back-btn {
+    position: absolute; left: 0; background: #ddd; color: #333;
+    padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; transition: 0.3s;
+}
+.back-btn:hover { background: var(--primary-blue); color: white; }
+
+/* Policies Grid */
+.policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.policy-card { background: white; padding: 25px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.po-icon { font-size: 2.5rem; margin-bottom: 10px; }
+.highlight-policy { border: 2px solid var(--primary-blue); background: #f0f8ff; }
+.demo-btn { background: var(--primary-blue); color: white; padding: 5px 10px; border-radius: 5px; display: inline-block; margin-top: 10px; font-size: 0.9rem; }
+
+/* Members Grid */
+.members-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.member-card { background: white; width: 200px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; text-align: center; transition: 0.3s; }
+.member-card:hover { transform: scale(1.05); }
+.member-img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+.member-info { padding: 10px; }
+.member-info h4 { font-size: 1.1rem; color: var(--dark-blue); }
+.member-info p { font-size: 0.85rem; color: #666; }
+
+/* Modal */
+.modal { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+.modal-content { background: white; padding: 30px; border-radius: 15px; width: 90%; max-width: 350px; text-align: center; position: relative; }
+.close-btn { position: absolute; top: 10px; right: 20px; font-size: 30px; cursor: pointer; }
+#modal-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 3px solid var(--primary-blue); }
+
+footer { text-align: center; padding: 20px; background: var(--dark-blue); color: white; margin-top: 40px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* ซ่อนเมนูบนมือถือ */
+    .back-btn { position: static; margin-bottom: 10px; display: inline-block; }
+    .header-with-back { flex-direction: column; }
+}
+
