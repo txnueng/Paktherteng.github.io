@@ -5,11 +5,11 @@ const membersData = [
     { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "keng_brave", fb: "Keng Klahan" },
     { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+4", desc: "", ig: "suay.sai", fb: "Suay Saisai" },
     { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+5", desc: "", ig: "tae.cool", fb: "Tae Tun" },
-    { name: "นางสาวดาว เด่น", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+6", desc: "", ig: "dao.den", fb: "Dao Den" },
-    { name: "นายบอย เกมเมอร์", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "boy.gamer", fb: "Boy Gamer" },
-    { name: "นางสาวฟ้า สดใส", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+8", desc: "", ig: "fah.fresh", fb: "Fah Sodsai" },
-    { name: "นายเข้ม แข็งแรง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+9", desc: "", ig: "kem.sport", fb: "Kem Kangrang" },
-    { name: "นางสาวน้ำ ใจงาม", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+10", desc: "", ig: "nam.jai", fb: "Nam Jaingam" },
+    { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+6", desc: "", ig: "dao.den", fb: "Dao Den" },
+    { name: "นางสาวอรณิชา พันธ์ศรี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "boy.gamer", fb: "Boy Gamer" },
+    { name: "นางสาวถาวรีย์ เกษสร", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+8", desc: "", ig: "fah.fresh", fb: "Fah Sodsai" },
+    { name: "นางสาวธัญญาภรณ์ จำปาโท", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+9", desc: "", ig: "kem.sport", fb: "Kem Kangrang" },
+    { name: "นางสาวพิมญาดา อินทนนต์", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+10", desc: "", ig: "nam.jai", fb: "Nam Jaingam" },
 ];
 
 // ทำงานเมื่อโหลดหน้าเสร็จ
