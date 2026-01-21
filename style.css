@@ -318,3 +318,55 @@ h2 { font-size: 1.5rem; color: #555; margin: 15px 0; }
     h1 { font-size: 2.2rem; } .number { font-size: 3.5rem; }
     .back-btn { position: static; transform: none; display: inline-block; margin-bottom: 20px; }
 }
+/* =========================================
+   ส่วนแก้ไข Popup ให้กลับมาลอยและซ่อนตัว
+   ========================================= */
+.modal {
+    display: none; /* สำคัญ! ซ่อนไว้ก่อน อย่าเพิ่งโชว์ */
+    position: fixed; /* สั่งให้ลอยทับหน้าจอ */
+    z-index: 2000; /* ลอยอยู่ชั้นบนสุด */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6); /* พื้นหลังสีดำจางๆ */
+    align-items: center;
+    justify-content: center;
+    display: none; /* ย้ำอีกทีเผื่อ browser งง */
+}
+
+/* ต้องใช้ display: flex ตอนที่สั่งเปิดด้วย JS (ใน script.js มีแล้ว ไม่ต้องแก้) */
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    /* แอนิเมชันเดิมที่มีอยู่แล้วจะทำงานร่วมกับตรงนี้ได้เลย */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+#modal-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-blue);
+}
