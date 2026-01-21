@@ -50,6 +50,32 @@
     <footer>
         <p>&copy; 2026 พรรคเถอะเตง เบอร์ 6 | โรงเรียนยโสธรพิทยาคม</p>
     </footer>
+<script>
+        // ฟังก์ชันสำหรับตรวจสอบการเลื่อนหน้าจอ
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll('.reveal');
+            // วนลูปเช็คทุกองค์ประกอบที่มีคลาส reveal
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150; // ระยะห่างจากขอบล่างที่จะให้เริ่มแสดง (ปรับได้)
+
+                // ถ้าองค์ประกอบเลื่อนเข้ามาในจอแล้ว ให้เติมคลาส active
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } 
+                // (ทางเลือก) ถ้าอยากให้เลื่อนผ่านไปแล้วหายไป ให้เปิดคอมเมนต์บรรทัดล่าง
+                // else { reveals[i].classList.remove('active'); }
+            }
+        }
+        // เรียกใช้ฟังก์ชันตอนเลื่อนหน้าจอ
+        window.addEventListener('scroll', revealOnScroll);
+        // เรียกใช้ครั้งแรกเผื่อมีอะไรอยู่ในจออยู่แล้ว
+        revealOnScroll();
+    </script>
+
+    </body>
+</html>
 
 </body>
 </html>
