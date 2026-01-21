@@ -10,8 +10,8 @@
 <body>
 
     <nav>
-        <div class="logo"><a href="index.html">พรรคเถอะเตง #6</a></div>
-        <ul class="nav-links">
+        <div class="logo reveal"><a href="index.html">พรรคเถอะเตง #6</a></div>
+        <ul class="nav-links reveal">
             <li><a href="index.html">หน้าหลัก</a></li>
             <li><a href="policies.html">นโยบาย</a></li>
             <li><a href="members.html" class="active">สมาชิกพรรค</a></li>
@@ -20,10 +20,10 @@
 
     <section class="members-section">
         <div class="header-with-back">
-            <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
-            <h2 class="section-title">สมาชิกพรรคของเรา</h2>
+            <a href="index.html" class="back-btn reveal">← กลับหน้าหลัก</a>
+            <h2 class="section-title reveal">สมาชิกพรรคของเรา</h2>
         </div>
-        <div class="members-container">
+        <div class="members-container reveal">
             </div>
     </section>
 
@@ -31,10 +31,10 @@
         <p>&copy; 2026 พรรคเถอะเตง เบอร์ 6</p>
     </footer>
 
-    <div id="memberModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
+    <div id="memberModal" class="modal reveal">
+        <div class="modal-content reveal">
+            <span class="close-btn reveal">&times;</span>
+            <div class="modal-body reveal">
                 <img id="modal-img" src="" alt="">
                 <h3 id="modal-name"></h3>
                 <p id="modal-role" class="role-text"></p>
@@ -48,6 +48,33 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // ฟังก์ชันสำหรับตรวจสอบการเลื่อนหน้าจอ
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll('.reveal');
+            // วนลูปเช็คทุกองค์ประกอบที่มีคลาส reveal
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150; // ระยะห่างจากขอบล่างที่จะให้เริ่มแสดง (ปรับได้)
+
+                // ถ้าองค์ประกอบเลื่อนเข้ามาในจอแล้ว ให้เติมคลาส active
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } 
+                // (ทางเลือก) ถ้าอยากให้เลื่อนผ่านไปแล้วหายไป ให้เปิดคอมเมนต์บรรทัดล่าง
+                // else { reveals[i].classList.remove('active'); }
+            }
+        }
+        // เรียกใช้ฟังก์ชันตอนเลื่อนหน้าจอ
+        window.addEventListener('scroll', revealOnScroll);
+        // เรียกใช้ครั้งแรกเผื่อมีอะไรอยู่ในจออยู่แล้ว
+        revealOnScroll();
+    </script>
+
+    </body>
+</html>
+
 </body>
 </html>
 
