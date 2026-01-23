@@ -1,14 +1,14 @@
 /* =========================================
-   style.css - ธีมแนนโน๊ะ ระดับวิกฤต (Critical Glitch)
+   style.css - ธีมแนนโน๊ะ (Soft Glitch - สบายตาขึ้น)
    ========================================= */
 
 /* 1. ตั้งค่าสี (Theme Variables) */
 :root {
-    --primary-red: #ff0000;    /* แดงสด (เลือด) */
-    --dark-red: #5a0000;       /* แดงเลือดหมูเข้ม */
-    --black: #000000;          /* ดำสนิท */
-    --card-bg: #111111;        /* พื้นหลังการ์ดดำเกือบสนิท */
-    --text-color: #d0d0d0;     /* ตัวหนังสือสีควันบุหรี่ */
+    --primary-red: #ff0000;    /* แดงสด */
+    --dark-red: #5a0000;       /* แดงเลือดหมู */
+    --black: #080808;          /* ดำเกือบสนิท (ปรับให้สว่างขึ้นนิดนึงให้อ่านง่าย) */
+    --card-bg: #151515;        /* พื้นหลังการ์ด */
+    --text-color: #d0d0d0;     /* ตัวหนังสือ */
     --white: #ffffff;
 }
 
@@ -17,77 +17,50 @@
 
 body {
     background-color: var(--black);
-    /* เพิ่มพื้นหลังแบบ Noise ซ่าๆ */
-    background-image: repeating-radial-gradient(circle at 50% 50%, rgba(20,0,0,0.5), rgba(0,0,0,0.9) 2px);
+    /* พื้นหลัง Noise แบบนิ่งๆ ไม่ขยับเยอะ */
+    background-image: radial-gradient(circle at center, #200000, #000000 90%);
     min-height: 100vh;
     color: var(--text-color);
     overflow-x: hidden;
     position: relative;
 }
 
-/* เพิ่ม CRT Scanlines (เส้นสแกนทีวีเก่า) ทับทั้งหน้าจอ */
+/* CRT Scanlines (เส้นสแกน) - ปรับให้จางลงมาก (0.15) */
 body::before {
     content: "";
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: repeating-linear-gradient(
         to bottom,
         transparent 0px,
-        transparent 3px,
-        rgba(0, 0, 0, 0.3) 4px,
-        rgba(0, 0, 0, 0.3) 6px
+        transparent 2px,
+        rgba(0, 0, 0, 0.5) 3px,
+        rgba(0, 0, 0, 0.5) 4px
     );
-    pointer-events: none; /* คลิกทะลุได้ */
-    z-index: 999; /* อยู่บนสุด */
-    opacity: 0.6;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.15; /* ลดจาก 0.6 เหลือ 0.15 ให้ดูสะอาดตา */
 }
 
 a { text-decoration: none; }
 
-/* --- New Keyframes (ท่าทางใหม่ที่โหดขึ้น) --- */
+/* --- Keyframes (ปรับให้นุ่มนวลขึ้น) --- */
 
-/* 1. ท่าสั่นสะเทือน (Vibrate) */
+/* 1. ท่าสั่นเบาๆ (Soft Vibrate) */
 @keyframes vibrate {
     0% { transform: translate(0); }
-    20% { transform: translate(-3px, 3px); }
-    40% { transform: translate(-3px, -3px); }
-    60% { transform: translate(3px, 3px); }
-    80% { transform: translate(3px, -3px); }
+    25% { transform: translate(-1px, 1px); } /* ขยับแค่ 1px พอ */
+    50% { transform: translate(-1px, -1px); }
+    75% { transform: translate(1px, 1px); }
     100% { transform: translate(0); }
 }
 
-/* 2. ท่ากระพริบรูปภาพ (Flicker) */
-@keyframes flicker-img {
-    0%, 100% { filter: grayscale(0%) contrast(100%) brightness(1.2); }
-    30%, 70% { filter: grayscale(100%) contrast(150%) brightness(0.8); }
-    50% { filter: grayscale(0%) contrast(100%) brightness(1.5) hue-rotate(90deg); } /* มีแวบสีเพี้ยนตรงกลาง */
-}
-
-/* 3. Super Glitch สำหรับหัวข้อ */
-@keyframes super-glitch {
-    0% { 
-        text-shadow: 4px 4px 0 var(--primary-red), -4px -4px 0 cyan; 
-        transform: translate(0) skew(0deg); 
-    }
-    20% { 
-        text-shadow: 4px -4px 0 var(--primary-red), -4px 4px 0 cyan; 
-        transform: translate(-5px, 2px) skew(-5deg);
-    }
-    40% { 
-        text-shadow: -4px 4px 0 var(--primary-red), 4px -4px 0 cyan; 
-        transform: translate(5px, -2px) skew(5deg);
-    }
-    60% { 
-        text-shadow: 4px 4px 0 var(--primary-red), -4px -4px 0 cyan; 
-        transform: translate(0) skew(0deg); clip-path: inset(20% 0 50% 0);
-    }
-    80% { 
-        text-shadow: -4px -4px 0 var(--primary-red), 4px 4px 0 cyan; 
-        transform: translate(-2px, 5px) skew(-2deg); clip-path: inset(60% 0 10% 0);
-    }
-    100% { 
-        text-shadow: 4px 4px 0 var(--primary-red), -4px -4px 0 cyan; 
-        transform: translate(0) skew(0deg); 
-    }
+/* 2. Glitch แบบช้าๆ (Slow Glitch) */
+@keyframes slow-glitch {
+    0%, 100% { transform: skew(0deg); text-shadow: 2px 2px 0 var(--dark-red); }
+    20% { transform: skew(-1deg); text-shadow: -2px 2px 0 var(--dark-red); }
+    40% { transform: skew(1deg); }
+    60% { transform: skew(-0.5deg); }
+    80% { transform: skew(0.5deg); }
 }
 
 /* 4. Navbar */
@@ -95,18 +68,16 @@ nav {
     display: flex; justify-content: space-between; align-items: center;
     padding: 1rem 5%; 
     background: rgba(10, 0, 0, 0.95); 
-    border-bottom: 3px solid var(--primary-red);
-    box-shadow: 0 5px 20px var(--dark-red);
+    border-bottom: 2px solid var(--primary-red);
     position: sticky; top: 0; z-index: 100;
 }
 .logo, .logo a { 
-    font-size: 1.5rem; font-weight: 900; color: var(--primary-red); 
-    text-transform: uppercase; letter-spacing: 3px; 
-    text-shadow: 2px 2px 0 cyan, -2px -2px 0 var(--dark-red);
+    font-size: 1.5rem; font-weight: 800; color: var(--primary-red); 
+    text-transform: uppercase; letter-spacing: 2px;
 }
 .nav-links { list-style: none; display: flex; gap: 25px; }
-.nav-links a { color: #666; font-weight: 700; transition: 0.2s; text-transform: uppercase; }
-.nav-links a:hover, .nav-links a.active { color: var(--white); text-shadow: 0 0 15px var(--primary-red); }
+.nav-links a { color: #888; font-weight: 600; transition: 0.3s; text-transform: uppercase; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); text-shadow: 0 0 10px var(--primary-red); }
 
 /* 5. Hero Section */
 .hero-section {
@@ -114,141 +85,142 @@ nav {
     display: flex; align-items: center; justify-content: center;
 }
 .party-logo { 
-    width: 160px; border-radius: 50%; border: 5px solid var(--primary-red); 
-    box-shadow: 0 0 50px var(--primary-red); margin-bottom: 25px;
-    filter: grayscale(100%) contrast(150%); transition: 0.1s;
+    width: 160px; border-radius: 50%; border: 4px solid var(--primary-red); 
+    box-shadow: 0 0 30px var(--dark-red); margin-bottom: 25px;
+    filter: grayscale(100%); transition: 0.3s;
 }
 .party-logo:hover { 
-    filter: grayscale(0%) contrast(120%); 
-    box-shadow: 0 0 80px var(--primary-red), inset 0 0 30px var(--primary-red);
-    animation: vibrate 0.2s linear infinite;
+    filter: grayscale(0%); 
+    box-shadow: 0 0 50px var(--primary-red);
 }
 
-/* หัวข้อ Super Glitch */
+/* หัวข้อ - ขยับช้าๆ ไม่ปวดหัว */
 h1 { 
     font-size: 4rem; color: var(--white); line-height: 1;
     position: relative; display: inline-block;
-    animation: super-glitch 0.8s infinite steps(5) alternate; /* ขยับเร็วและแรง */
+    animation: slow-glitch 3s infinite ease-in-out; /* ช้าลงเป็น 3 วิ */
 }
 .number { 
     color: var(--primary-red); font-size: 6rem; font-weight: 900; display: block;
-    text-shadow: 0 0 30px var(--primary-red);
+    text-shadow: 0 0 20px var(--dark-red);
 }
 h2 { font-size: 1.5rem; color: #888; margin: 20px 0; letter-spacing: 2px; text-transform: uppercase; }
 
 .slogan { 
-    background: var(--primary-red); color: black; padding: 15px 40px; 
-    font-weight: 900; font-style: italic; font-size: 1.2rem;
-    transform: rotate(-3deg) skew(-5deg); 
+    background: var(--primary-red); color: black; padding: 12px 35px; 
+    font-weight: 800; font-style: italic; font-size: 1.1rem;
+    transform: skew(-10deg); /* เอียงเฉยๆ ไม่หมุน */
     display: inline-block; margin: 30px 0 50px; 
-    border: 3px solid black;
-    box-shadow: 8px 8px 0 var(--white);
+    box-shadow: 5px 5px 0 rgba(255,255,255,0.2);
 }
 
-/* 6. Cards (การ์ดที่สั่นได้) */
+/* 6. Cards (การ์ดต่างๆ) */
 .menu-card, .policy-card, .member-card {
     background: var(--card-bg); 
-    border: 2px solid #222;
+    border: 1px solid #333;
     color: var(--text-color);
     padding: 30px; 
-    transition: all 0.1s; /* ตอบสนองไวมาก */
+    transition: all 0.3s ease; /* ขยับนุ่มนวล */
     position: relative; overflow: hidden;
 }
-/* ชี้แล้วสั่น + ขอบแดงเรืองแสง */
+
+/* ชี้แล้วสั่นเบาๆ + ขอบแดง */
 .menu-card:hover, .policy-card:hover, .member-card:hover { 
-    animation: vibrate 0.2s linear infinite; /* สั่นตลอดเวลาที่ชี้ */
+    animation: vibrate 0.4s linear infinite; /* สั่นเบาๆ */
     border-color: var(--primary-red);
-    box-shadow: 0 0 30px var(--primary-red);
-    background: #1a0000; /* เปลี่ยนสีพื้นหลังนิดหน่อย */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .menu-card i, .po-icon { 
     font-size: 3.5rem; color: var(--primary-red); margin-bottom: 20px; 
-    filter: drop-shadow(0 0 10px var(--primary-red));
 }
 
 /* ปุ่ม IG */
 .ig-btn { 
     display: inline-block; margin-top: 40px; 
-    background: black; color: var(--primary-red); border: 3px solid var(--primary-red);
-    padding: 15px 40px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase;
-    transition: 0.2s;
+    background: black; color: var(--primary-red); border: 2px solid var(--primary-red);
+    padding: 12px 30px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    transition: 0.3s;
 }
 .ig-btn:hover { 
     background: var(--primary-red); color: white; 
-    box-shadow: 0 0 40px var(--primary-red);
-    animation: vibrate 0.3s linear infinite;
+    box-shadow: 0 0 30px var(--primary-red);
 }
 
-/* 7. รูปสมาชิก (ชี้แล้วกระพริบ) */
+/* 7. รูปสมาชิก (เลิกกระพริบ เปลี่ยนเป็นค่อยๆ ชัดขึ้น) */
 .member-img { 
     width: 100%; height: 240px; object-fit: cover; 
-    filter: grayscale(100%) contrast(150%) brightness(0.8); /* ขาวดำมืดๆ */
-    transition: 0.1s; border-bottom: 5px solid var(--primary-red);
+    filter: grayscale(100%) brightness(0.7); /* ขาวดำมืดๆ */
+    transition: 0.4s; border-bottom: 4px solid var(--primary-red);
 }
 .member-card:hover .member-img { 
-    animation: flicker-img 0.5s steps(6) infinite; /* กระพริบรัวๆ */
+    filter: grayscale(0%) brightness(1); /* ชี้แล้วเป็นสีปกติ ไม่แสบตา */
 }
-.member-info h4 { font-size: 1.2rem; color: var(--white); margin-top: 15px; font-weight: bold; }
-.member-info p { color: var(--primary-red); font-size: 0.9rem; font-weight: bold; }
+.member-info h4 { font-size: 1.1rem; color: var(--white); margin-top: 15px; font-weight: bold; }
+.member-info p { color: #888; font-size: 0.9rem; }
 
 /* 8. Layout ทั่วไป */
-.container, .members-section { padding: 80px 10%; }
+.container, .members-section { padding: 60px 10%; }
 .main-menu, .policy-grid, .members-container { 
     display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; 
 }
 .policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
 .section-title { 
-    font-size: 3rem; color: var(--white); text-transform: uppercase; font-weight: 900;
-    text-shadow: 3px 3px 0 var(--primary-red);
-    border-bottom: 5px solid var(--primary-red); display: inline-block; margin-bottom: 50px; 
+    font-size: 2.5rem; color: var(--white); text-transform: uppercase; font-weight: 900;
+    border-bottom: 4px solid var(--primary-red); display: inline-block; margin-bottom: 40px; 
 }
 .back-btn {
     position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-    background: black; color: var(--white); padding: 12px 25px; font-weight: bold;
-    border: 2px solid var(--primary-red); font-size: 1rem; transition: 0.2s;
+    background: black; color: var(--white); padding: 10px 20px; 
+    border: 1px solid var(--primary-red); font-size: 0.9rem; transition: 0.3s;
 }
-.back-btn:hover { background: var(--primary-red); box-shadow: 0 0 20px var(--primary-red); }
+.back-btn:hover { background: var(--primary-red); }
 
-/* 9. Modal Popup (โหดขึ้น) */
+/* 9. Modal Popup */
 .modal {
     display: none; position: fixed !important; z-index: 9999 !important;
     left: 0; top: 0; width: 100vw; height: 100vh;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0,0,0,0.9);
     align-items: center; justify-content: center;
 }
 .modal-content {
-    background-color: #0a0a0a; color: white; padding: 50px; 
-    border: 4px solid var(--primary-red);
-    width: 90%; max-width: 450px; text-align: center;
-    box-shadow: 0 0 100px rgba(255, 0, 0, 0.4);
-    animation: super-glitch 0.5s ease-out; /* เด้งขึ้นมาแบบจอพัง */
+    background-color: #111; color: white; padding: 40px; 
+    border: 2px solid var(--primary-red);
+    width: 90%; max-width: 400px; text-align: center;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.2);
+    animation: popIn 0.3s ease-out; /* เด้งปกติ ไม่ Glitch */
 }
-.close-btn { position: absolute; top: 15px; right: 25px; font-size: 40px; color: #888; cursor: pointer; }
-.close-btn:hover { color: var(--primary-red); text-shadow: 0 0 20px var(--primary-red); }
-#modal-img {
-    width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
-    margin-bottom: 25px; border: 5px solid var(--primary-red); 
-    filter: grayscale(100%) contrast(150%);
-    box-shadow: 0 0 30px var(--primary-red);
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
-#modal-name { font-size: 2rem; color: var(--primary-red); margin-bottom: 10px; font-weight: 900; text-transform: uppercase; }
-.role-text { color: var(--white); margin-bottom: 20px; font-style: italic; font-size: 1.1rem; }
 
-/* 10. Aggressive Scroll Reveal (โผล่มาแบบกระชาก) */
-.reveal { opacity: 0; transform: translateY(50px) scale(0.9); transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-.reveal.active { opacity: 1; transform: translateY(0) scale(1); }
+.close-btn { position: absolute; top: 10px; right: 20px; font-size: 30px; color: #666; cursor: pointer; }
+.close-btn:hover { color: var(--primary-red); }
+#modal-img {
+    width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+    margin-bottom: 20px; border: 3px solid var(--primary-red); 
+    filter: grayscale(100%);
+}
+#modal-name { font-size: 1.8rem; color: var(--primary-red); margin-bottom: 5px; font-weight: 800; text-transform: uppercase; }
+.role-text { color: var(--white); margin-bottom: 15px; font-style: italic; }
+
+/* 10. Scroll Reveal (ปกติ) */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.5s; }
+.reveal.active { opacity: 1; transform: translateY(0); }
 
 /* Mobile */
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    h1 { font-size: 3rem; } .number { font-size: 5rem; }
+    h1 { font-size: 2.8rem; } .number { font-size: 4.5rem; }
     .header-with-back { flex-direction: column; position: relative; }
-    .back-btn { position: static; transform: none; display: inline-block; margin-bottom: 30px; }
+    .back-btn { position: static; transform: none; display: inline-block; margin-bottom: 25px; }
 }
 
 footer { 
-    text-align: center; padding: 40px; background: #050505; color: #666; margin-top: 80px; 
-    border-top: 5px solid var(--dark-red); font-weight: bold; text-transform: uppercase;
+    text-align: center; padding: 30px; background: #080808; color: #555; margin-top: 60px; 
+    border-top: 3px solid var(--dark-red);
 }
+
