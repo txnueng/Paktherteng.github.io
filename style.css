@@ -1,11 +1,54 @@
-/* การตั้งค่าพื้นฐาน */
+/* =========================================
+   ธีมแนนโน๊ะ (แดง-ดำ-ขาว) - Girl from Nowhere
+   ========================================= */
+
 :root {
-    --primary-blue: #007bff;
-    --light-blue: #e3f2fd;
-    --dark-blue: #004494;
+    /* เปลี่ยนชุดสีทั้งหมดเป็น แดง-ดำ */
+    --primary-blue: #D32F2F; /* สีแดงเลือดนก (สีหลัก) */
+    --light-blue: #ffebee;   /* สีแดงจางๆ (พื้นหลังการ์ดตอน Hover) */
+    --dark-blue: #000000;    /* สีดำสนิท (ตัวหนังสือหัวข้อ/เมนู) */
     --white: #ffffff;
-    --text-color: #333;
+    --text-color: #1a1a1a;   /* สีเทาเข้มเกือบดำ */
+    --accent-red: #ff1744;   /* สีแดงสด (สำหรับจุดเน้น) */
 }
+
+/* พื้นหลังขยับได้แบบ Dark & Mysterious */
+body {
+    /* ไล่สี: ดำ -> แดงเข้ม -> แดงสด -> ขาว (ให้ดูมีมิติ ลึกลับ) */
+    background: linear-gradient(-45deg, #000000, #8E0000, #D32F2F, #f5f5f5);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* ขยับเร็วขึ้นนิดนึงให้ดู Active */
+    min-height: 100vh;
+}
+
+/* คีย์เฟรมการขยับของพื้นหลัง */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* เพิ่ม: เปลี่ยนเงา (Shadow) ให้เป็นสีแดง/ดำ จางๆ แทนสีฟ้า */
+.policy-card:hover, .member-card:hover, .menu-card:hover {
+    box-shadow: 0 15px 30px rgba(168, 0, 0, 0.3) !important; /* เงาสีแดง */
+    border-color: var(--primary-blue) !important;
+}
+
+/* เปลี่ยนสีไอคอนให้เป็นแดง */
+.po-icon, .menu-card i {
+    color: var(--primary-blue);
+}
+
+/* เปลี่ยนสีปุ่ม IG เป็นดำ-แดง */
+.ig-btn {
+    background: #000000 !important; /* พื้นหลังดำ */
+    border: 2px solid #D32F2F;      /* ขอบแดง */
+}
+.ig-btn:hover {
+    background: #D32F2F !important; /* ชี้แล้วกลายเป็นแดง */
+    color: white !important;
+}
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
 body { background-color: #f4f7f6; color: var(--text-color); }
