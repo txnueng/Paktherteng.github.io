@@ -150,10 +150,6 @@ footer { text-align: center; padding: 20px; background: var(--dark-blue); color:
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; scroll-behavior: smooth; }
 
 /* --- Keyframes Definitions (ท่าทางต่างๆ) --- */
-@keyframes floatBounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
-}
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -429,15 +425,4 @@ body {
 }
 
 /* คีย์เฟรมการขยับของสีพื้นหลัง */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
