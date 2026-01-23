@@ -411,14 +411,6 @@ h2 { font-size: 1.5rem; color: #555; margin: 15px 0; }
    พื้นหลังแบบ Gradient Wave (สีไหลไปมานุ่มๆ)
    ========================================= */
 
-body {
-    /* สีที่ใช้ไล่ระดับ (ฟ้าเข้ม, ฟ้าสด, ฟ้าอ่อน, ขาว) */
-    background: linear-gradient(-45deg, #004494, #007bff, #e3f2fd, #ffffff);
-    background-size: 400% 400%; /* ซูมสีให้ใหญ่ขึ้นเพื่อให้เห็นการขยับ */
-    animation: gradientBG 15s ease infinite; /* ความเร็ว 15 วิ */
-    min-height: 100vh;
-}
-
 /* ทำให้ส่วน Hero โปร่งใสเพื่อให้เห็นพื้นหลังขยับ */
 .hero-section {
     background: transparent !important; 
