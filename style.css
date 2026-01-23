@@ -148,8 +148,6 @@ footer { text-align: center; padding: 20px; background: var(--dark-blue); color:
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; scroll-behavior: smooth; }
-body { background-color: #f8f9fa; color: var(--text-color); overflow-x: hidden; } /* ป้องกันสกรอลบาร์แนวนอน */
-a { text-decoration: none; }
 
 /* --- Keyframes Definitions (ท่าทางต่างๆ) --- */
 @keyframes floatBounce {
