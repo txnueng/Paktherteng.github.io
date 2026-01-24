@@ -4,7 +4,7 @@ const membersData = [
     { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+2", desc: "", ig: "babiilx2lo4xs", fb: "Láloxs Kx" },
     { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "mymind_melody", fb: "Sasikan Khamthong" },
     { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "Screenshot_20260124_131959_Drive.jpg", desc: "", ig: "babygirl3ystt", fb: "Maprang Pps" },
-    { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+5", desc: "", ig: "_lluvvida", fb: "Rattanaphon Lotkaeo" },
+    { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "Mmr.jpg", desc: "", ig: "_lluvvida", fb: "Rattanaphon Lotkaeo" },
     { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "Screenshot_20260124_132020_Drive.jpg", desc: "", ig: "kim_mmmt", fb: "Titiporn  Salubsri" },
     { name: "นางสาวอรณิชา พันธ์ศรี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "monlelasandia", fb: "Onnicha" },
     { name: "นางสาวถาวรีย์ เกษสร", role: "สมาชิกพรรค", img: "ถาวรีย์(ไออุ่น).jpg", desc: "", ig: "tainunsnaffle_", fb: "AI UN" },
