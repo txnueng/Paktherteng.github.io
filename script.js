@@ -2,7 +2,7 @@
 const membersData = [
     { name: "นายศิริพงศ์ พลไชย", role: "ประธานพรรค", img: "Memberr11.png", desc: "เต็งหนึ่ง", ig: "t1.nuengx", fb: "Siripong Phonchai" },
     { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "1769235664301.jpg", desc: "ก้าน", ig: "babiilx2lo4xs", fb: "Láloxs Kx" },
-    { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "1769241603934.jpg", desc: "มาย", ig: "mymind_melody", fb: "Sasikan Khamthong" },
+    { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "1769241603934.jpg", desc: "มายด์", ig: "mymind_melody", fb: "Sasikan Khamthong" },
     { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "Ttn.jpg", desc: "มะปราง", ig: "babygirl3ystt", fb: "Maprang Pps" },
     { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "Mmr.jpg", desc: "ไอด้า", ig: "_lluvvida", fb: "Rattanaphon Lotkaeo" },
     { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "Screenshot_20260124_132020_Drive.jpg", desc: "ขิม", ig: "kim_mmmt", fb: "Titiporn  Salubsri" },
