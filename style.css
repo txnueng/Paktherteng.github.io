@@ -223,4 +223,21 @@ footer {
     text-align: center; padding: 30px; background: #080808; color: #555; margin-top: 60px; 
     border-top: 3px solid var(--dark-red);
 }
+/* ตกแต่งข้อความ "คลิกเพื่อดูโปรไฟล์เพิ่มเติม" */
+.click-hint {
+    font-size: 0.75rem !important; /* ตัวหนังสือเล็กหน่อย */
+    color: #666 !important;        /* สีเทาจางๆ */
+    margin-top: 8px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* พอเอาเมาส์ชี้การ์ด ให้ข้อความนี้กลายเป็นสีแดงเรืองแสง */
+.member-card:hover .click-hint {
+    color: var(--primary-red) !important;
+    text-shadow: 0 0 5px var(--primary-red);
+    font-weight: bold;
+}
+
 
