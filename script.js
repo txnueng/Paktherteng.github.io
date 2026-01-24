@@ -24,11 +24,12 @@ card.classList.add('member-card', 'reveal');
             card.classList.add('member-card');
             card.setAttribute('onclick', `openModal(${index})`);
             card.innerHTML = `
-                <img src="${member.img}" alt="${member.name}" class="member-img">
-                <div class="member-info">
-                    <h4>${member.name}</h4>
-                    <p>${member.role}</p>
-                </div>
+        <img src="${member.img}" alt="${member.name}" class="member-img">
+        <div class="member-info">
+            <h4>${member.name}</h4>
+            <p>${member.role}</p>
+            <p class="click-hint">คลิกเพื่อดูโปรไฟล์เพิ่มเติม</p>
+        </div>
             `;
             membersContainer.appendChild(card);
         });
