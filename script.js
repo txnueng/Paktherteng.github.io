@@ -1,7 +1,7 @@
 // ข้อมูลสมาชิก 10 คน
 const membersData = [
     { name: "นายศิริพงศ์ พลไชย", role: "ประธานพรรค", img: "Memberr11.png", desc: "", ig: "t1.nuengx", fb: "Siripong Phonchai" },
-    { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+2", desc: "", ig: "babiilx2lo4xs", fb: "Láloxs Kx" },
+    { name: "นายเลิศหล้า ภูมลา", role: "สมาชิกพรรค", img: "1769235664301.jpg", desc: "", ig: "babiilx2lo4xs", fb: "Láloxs Kx" },
     { name: "นางสาวศศิกานต์ คำทอง", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=VP+3", desc: "", ig: "mymind_melody", fb: "Sasikan Khamthong" },
     { name: "นางสาวประภัสสร คงมี", role: "สมาชิกพรรค", img: "Screenshot_20260124_131959_Drive.jpg", desc: "", ig: "babygirl3ystt", fb: "Maprang Pps" },
     { name: "นางสาวรัตนาพร หลอดแก้ว", role: "สมาชิกพรรค", img: "Mmr.jpg", desc: "", ig: "_lluvvida", fb: "Rattanaphon Lotkaeo" },
