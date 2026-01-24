@@ -8,7 +8,7 @@ const membersData = [
     { name: "นางสาวฐิติพร สลับศรี ", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+6", desc: "", ig: "kim_mmmt", fb: "Titiporn  Salubsri" },
     { name: "นางสาวอรณิชา พันธ์ศรี", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+7", desc: "", ig: "monlelasandia", fb: "Onnicha" },
     { name: "นางสาวถาวรีย์ เกษสร", role: "สมาชิกพรรค", img: "ถาวรีย์(ไออุ่น).jpg", desc: "", ig: "tainunsnaffle_", fb: "AI UN" },
-    { name: "นางสาวธัญญาภรณ์ จำปาโท", role: "สมาชิกพรรค", img: "มะปราง(4-1).jpg, desc: "", ig: "maprangmaq", fb: "Thanyapron Champato" },
+    { name: "นางสาวธัญญาภรณ์ จำปาโท", role: "สมาชิกพรรค", img: "มะปราง(4-1).jpg", desc: "", ig: "maprangmaq", fb: "Thanyapron Champato" },
     { name: "นางสาวพิมญาดา อินทนนต์", role: "สมาชิกพรรค", img: "https://via.placeholder.com/200?text=M+10", desc: "", ig: "268.9a", fb: "Pimyada Intanon" },
 ];
 
