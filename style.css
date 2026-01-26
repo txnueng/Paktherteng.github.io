@@ -239,5 +239,35 @@ footer {
     text-shadow: 0 0 5px var(--primary-red);
     font-weight: bold;
 }
+/* ตกแต่งหัวข้อ "นโยบายทำได้จริง ไม่ขายฝัน" */
+.real-policy-head {
+    font-size: 1.8rem;               /* ขนาดตัวหนังสือ */
+    color: var(--white);             /* สีขาว */
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 900;                /* ตัวหนาพิเศษ */
+    text-transform: uppercase;
+    letter-spacing: 2px;             /* ระยะห่างตัวอักษร */
+    
+    /* เอฟเฟกต์เรืองแสงและเงา */
+    text-shadow: 0 0 10px var(--primary-red); 
+    
+    /* ขีดเส้นใต้แบบเท่ๆ */
+    border-bottom: 3px solid var(--primary-red);
+    display: inline-block;
+    padding-bottom: 5px;
+
+    /* ใส่แอนิเมชันให้ดูขยับนิดๆ (ใช้ของเดิมที่มีในธีม) */
+    animation: slow-glitch 4s infinite ease-in-out;
+}
+
+/* บนมือถือปรับให้เล็กลงหน่อยจะได้ไม่ล้นจอ */
+@media (max-width: 768px) {
+    .real-policy-head {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+}
+
 
 
